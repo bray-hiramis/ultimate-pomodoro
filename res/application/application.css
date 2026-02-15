@@ -1,0 +1,36 @@
+.root {
+   font-family: "Roboto", sans-serif;
+}
+
+#mainPane {
+   -fx-background-color: #FFF8DE;
+}
+
+#topHbox {
+   -fx-background-color: #B7BDF7;
+}
+
+#lblStatus {
+   -fx-font-size: 20px;
+   -fx-font-weight: 700;
+   -fx-text-fill: #333;
+}
+
+#containerTimer {
+   -fx-background-radius: 50%;
+   -fx-background-color: #576A8F;
+}
+
+#lblTimer {
+   -fx-font-size: 30px;
+   -fx-text-fill: #FFF8DE;
+}
+
+#lblSession {
+   -fx-font-size: 20px;
+}
+
+Button {
+   -fx-background-radius: 50%;
+   -fx-background-color: #FF7444;
+}
