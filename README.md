@@ -1,4 +1,4 @@
-# BillBuddy - Tip Calculator
+# Ultimate Pomodoro
 
 The Ultimate Pomodoro App :)
 
