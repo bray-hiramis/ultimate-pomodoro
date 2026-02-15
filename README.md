@@ -1,6 +1,6 @@
 # Ultimate Pomodoro
 
-The Ultimate Pomodoro App :)
+The Ultimate Pomodoro App to focus!
 
 ---
 
