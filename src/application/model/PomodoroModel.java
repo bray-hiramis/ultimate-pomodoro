@@ -1,13 +1,13 @@
 package application.model;
 
-import java.math.BigDecimal;
+//import java.math.BigDecimal;
 
 public class PomodoroModel {
 	
 	private boolean isWorking = true;
 	private boolean isFinished = false;
 	
-	private int workMinutes = 10; // 1500s
+	private int workMinutes = 25 * 60; // 1500s
 	private int breakMinute = 5 * 60; // 300s
 	private int longBreak = 15 * 60; // 1800s
 	private long remainingSeconds;
