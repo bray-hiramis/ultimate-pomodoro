@@ -1,10 +1,13 @@
 package application.model;
+
+import java.math.BigDecimal;
+
 public class PomodoroModel {
 	
 	private boolean isWorking = true;
 	private boolean isFinished = false;
 	
-	private int workMinutes = 25 * 60; // 1500s
+	private int workMinutes = 10; // 1500s
 	private int breakMinute = 5 * 60; // 300s
 	private int longBreak = 15 * 60; // 1800s
 	private long remainingSeconds;
@@ -113,9 +116,22 @@ public class PomodoroModel {
 	public double getProgress() {
 		long totalSeconds = isWorking ? workMinutes : 
             (pomodoroCompleted % 4 == 0 ? longBreak : breakMinute);
-		if (remainingSeconds <= 0) return 1.0;
+		if (remainingSeconds == 1) return 1.0;
 		double p = 1.0 - (remainingSeconds / (double) totalSeconds);
 	    return Math.max(0.0, Math.min(1.0, p));
+		
+	    // Version 2
+//		BigDecimal progress = new BigDecimal(String.format("%2f", 0.0));
+//		
+//		if (progress.doubleValue() <= 1) {
+//			if (remainingSeconds == 1) {
+//				return 1.0;
+//			}
+//			Double formulaDouble = 1.0 - (remainingSeconds / (double) totalSeconds);
+//			progress = new BigDecimal(String.format("%2f", progress.doubleValue() + formulaDouble));
+//			System.out.println(progress.doubleValue());
+//		}
+//		return progress.doubleValue();
 	}
 	
 	public boolean isLongBreak() {
